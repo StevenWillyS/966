@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>KickOff</title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/grid.css">
+		<link rel="stylesheet" href="style.css">
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<link rel="stylesheet" href="SlickNav/slicknav.css" />
+		<script src="SlickNav/jquery.slicknav.min.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="container">
+				<div id="logo" class="grid_4">
+					<a href="index.html">
+						<img src="logo.png">
+					</a>
+				</div>
+				<div id="menu" class="grid_8">
+					<ul id="menu">
+						<li><a href="berita.html">BERITA</a>
+						</li><li><a href="#">JADWAL</a>
+						<div class = "dropdown2">
+						<a href = "jadwal.html">LIGA INGGRIS</a>
+						<a href = "jadwal2.html">LIGA SPANYOL</a>
+						<a href = "jadwal1.html">LIGA ITALY</a>
+						</div></li><li><a href="#">KLASEMEN<a>
+						<div class = "dropdown3">
+						<a href = "klasemen.html">LIGA INGGRIS</a>
+						<a href = "klasemen2.html">LIGA SPANYOL</a>
+						<a href = "klasemen1.html">LIGA ITALY</a>
+						</div>
+						</li><!--
+					 --><li><a href="galeri.html">GALERI<a></li>
+					</ul>
+				</div>
+				<script>
+				$(function(){
+					$('#menu').slicknav();
+				});
+				</script>
+			</div>
+		</div>
+		<div id="big" class="container">
+			<div id="slide" class="grid_12">
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<a href="#"><img src="slider/slider.jpg" class="slider" style="width:100%"></a>
+					</div>
+					<div class="mySlides fade">
+						<a href="#"><img src="slider/slider2.jpg" class="slider" style="width:100%"></a>
+					</div>
+					<div class="mySlides fade">
+						<a href="#"><img src="slider/slider3.jpg" class="slider" style="width:100%"></a>
+					</div>
+					<div class="mySlides fade">
+						<a href="#"><img src="slider/slider4.jpg" class="slider" style="width:100%"></a>
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+				</div>
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span> 
+					<span class="dot" onclick="currentSlide(2)"></span> 
+					<span class="dot" onclick="currentSlide(3)"></span> 
+					<span class="dot" onclick="currentSlide(4)"></span> 
+				</div>
+				<br>
+				<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+			</div>
+			<div id="left" class="grid_4">
+				<a href = "berita3.html"><img src="3box/box3.jpg"></a>
+				<div id="text1">
+					<a href = "berita3.html"><p><b>Pemain Terbaik AFF Suzuki Cup 2016</b></p></a>
+					<p class="text1">Melalui voting dari fans, penilaian redaksi KickOff Asia Tenggara dan para legenda sepakbola ASEAN, Teerasil Dangda terpilih sebagai pemain terbaik AFF Suzuki Cup 2016</p>
+				</div>
+
+			</div>
+			<div id="middle" class="grid_4">
+				<a href = "berita1.html"><img src="3box/box1.jpg"></a>
+				<div id="text1">
+					<a href = "berita1.html"><p><b>Valencia Tawar Rojo £14 Juta</b></p></a>
+					<p class="text1">Valencia mengajukan sebuah tawaran untuk bek Manchester United Marcos Rojo. Pemain asal Argentina itu masuk ke dalam skuat Jose Mourinho beberapa pekan terakhir ini, namun Los Che berharap kedatangan Victor Lindelof bisa memudahkan langkah mereka.</p>
+				</div>
+			</div>
+			<div id="right" class="grid_4">
+				<a href = "berita2.html"><img src="3box/box2.jpg"></a>
+				<div id="text1">
+					<a href = "berita2.html"><p><b>Rooney Ditawari Gaji Tinggi</b></p></a>
+					<p class="text1">Kapten Manchester United Wayne Rooney akan ditawari gaji tinggi oleh klub Liga Super Tiongkok. Sudah ada Beijing Guoan dan Guangzhou Evergrande yang tertarik</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div id="kotak" class="grid_4">
+				<div id="left1in"><p>POPULER SAAT INI</p></div>
+				<div id="gambar" class="grid_1">
+					<a href="populer1.html"><img src="Populer/1.png"></a>
+				</div>
+				<div id="tulisan" class="grid_2">
+					<p><a href="populer1.html">Jadwal TV Siaran Langsung SepakBola Hari ini</a></p>
+				</div>
+				<div id="gambar" class="grid_1">
+					<a href="#"><img src="Populer/2.png"></a>
+				</div>
+				<div id="tulisan" class="grid_2">
+					<p><a href="#">Momentum Sempurna<br>Kebangkitan AC Milan</a></p>
+				</div>
+				<div id="gambar" class="grid_1">
+					<a href="#"><img src="Populer/3.png"></a>
+				</div>
+				<div id="tulisan" class="grid_2">
+					<p><a href="#">Sekedar Cukup Tak Cukup <br> Buat Juventus</a></p>
+				</div>
+				<div id="gambar" class="grid_1">
+					<a href="#"><img src="Populer/4.png"></a>
+				</div>
+				<div id="tulisan" class="grid_2">
+					<p><a href="#">Chelsea Miliki Pertahanan<br> Dengan Skor Tertinggi</a></p>
+				</div>
+				<div id="akhir"><p><a href="#">Lihat Selengkapnya<a></p></div>
+			</div>
+			<div id="kotak" class="grid_4">
+				<div id="left1in"><p>JADWAL</p></div>
+				<div id="kotak-kecil">Liga Inggris</div>
+				<table>
+					<tr>
+						<td>26/12</td>
+						<td><img src="logoklub/epl/watford-fc.png" class="logoclub"></td>
+						<td>WAT</td>
+						<td><div id="minibox">19:30</div></td>
+						<td class="sp">CRY</td>
+						<td class="sp"><img src="logoklub/epl/crystal-palace-fc.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>26/12</td>
+						<td><img src="logoklub/epl/arsenal.png" class="logoclub"></td>
+						<td>ARS</td>
+						<td><div id="minibox">22:00</div></td>
+						<td class="sp">WBA</td>
+						<td class="sp"><img src="logoklub/epl/west-bromwich-albion-hd-logo.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>26/12</td>
+						<td><img src="logoklub/epl/burnley.png" class="logoclub"></td>
+						<td>BUR</td>
+						<td><div id="minibox">22:00</div></td>
+						<td class="sp">MID</td>
+						<td class="sp"><img src="logoklub/epl/middlesbrough.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>26/12</td>
+						<td><img src="logoklub/epl/chelsea.png" class="logoclub"></td>
+						<td>CHE</td>
+						<td><div id="minibox">22:00</div></td>
+						<td class="sp">BOR</td>
+						<td class="sp"><img src="logoklub/epl/afc-bournemouth.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>26/12</td>
+						<td><img src="logoklub/epl/leicester-city-fc-hd-logo.png" class="logoclub"></td>
+						<td>LEI</td>
+						<td><div id="minibox">22:00</div></td>
+						<td class="sp">EVE</td>
+						<td class="sp"><img src="logoklub/epl/everton-fc-logo1.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>26/12</td>
+						<td><img src="logoklub/epl/manchester-united.png" class="logoclub"></td>
+						<td>MUN</td>
+						<td><div id="minibox">22:00</div></td>
+						<td class="sp">SUN</td>
+						<td class="sp"><img src="logoklub/epl/sunderland.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>26/12</td>
+						<td><img src="logoklub/epl/swansea-city-afc.png" class="logoclub"></td>
+						<td>SWA</td>
+						<td><div id="minibox">22:00</div></td>
+						<td class="sp">WHU</td>
+						<td class="sp"><img src="logoklub/epl/west-ham.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>27/12</td>
+						<td><img src="logoklub/epl/hull-city.png" class="logoclub"></td>
+						<td>HUL</td>
+						<td><div id="minibox">00:15</div></td>
+						<td class="sp">MCI</td>
+						<td class="sp"><img src="logoklub/epl/manchester-city-new-hd-logo1.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>28/12</td>
+						<td><img src="logoklub/epl/liverpool.png" class="logoclub"></td>
+						<td>LIV</td>
+						<td><div id="minibox">00:15</div></td>
+						<td class="sp">STO</td>
+						<td class="sp"><img src="logoklub/epl/stoke-city.png" class="logoclub"></td>
+					</tr>
+					<tr>
+						<td>29/12</td>
+						<td><img src="logoklub/epl/southampton-fc.png" class="logoclub"></td>
+						<td>SOT</td>
+						<td><div id="minibox">02:45</div></td>
+						<td class="sp">TOT</td>
+						<td class="sp"><img src="logoklub/epl/tottenham-hotspur.png" class="logoclub"></td>
+					</tr>
+					
+				</table>
+				<div id="akhir"><p><a href="jadwal.html">Lihat Selengkapnya<a></p></div>
+			</div>
+			<div id="kotak" class="grid_4">
+				<div id="left1in"><p>KLASEMEN</p></div>
+				<div id="kotak-kecil">Liga Inggris</div>
+				<div id="klasemen">
+					<table>
+						<tr>
+							<td>1</td>
+							<td><img src="logoklub/epl/chelsea.png" class="logoclub"></td>
+							<td class="sp2">CHELSEA FC</td>
+							<td>18</td>
+							<td>46</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td><img src="logoklub/epl/liverpool.png" class="logoclub"></td>
+							<td class="sp2">LIVERPOOL FC</td>
+							<td>18</td>
+							<td>40</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td><img src="logoklub/epl/manchester-city-new-hd-logo1.png" class="logoclub"></td>
+							<td class="sp2">MANCHESTER CITY FC</td>
+							<td>18</td>
+							<td>39</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td><img src="logoklub/epl/arsenal.png" class="logoclub"></td>
+							<td class="sp2">ARSENAL FC</td>
+							<td>18</td>
+							<td>37</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td><img src="logoklub/epl/tottenham-hotspur.png" class="logoclub"></td>
+							<td class="sp2">TOTTENHAM HOTSPUR FC</td>
+							<td>18</td>
+							<td>36</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td><img src="logoklub/epl/manchester-united.png" class="logoclub"></td>
+							<td class="sp2">MANCHESTER UNITED FC</td>
+							<td>18</td>
+							<td>33</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td><img src="logoklub/epl/everton-fc-logo1.png" class="logoclub"></td>
+							<td class="sp2">EVERTON FC</td>
+							<td>18</td>
+							<td>26</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td><img src="logoklub/epl/southampton-fc.png" class="logoclub"></td>
+							<td class="sp2">SOUTHAMPTON FC</td>
+							<td>18</td>
+							<td>24</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td><img src="logoklub/epl/west-bromwich-albion-hd-logo.png" class="logoclub"></td>
+							<td class="sp2">WEST BROMWICH<br>ALBION FC</td>
+							<td>18</td>
+							<td>23</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td><img src="logoklub/epl/watford-fc.png" class="logoclub"></td>
+							<td class="sp2">WATFORD FC</td>
+							<td>18</td>
+							<td>22</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td><img src="logoklub/epl/west-ham.png" class="logoclub"></td>
+							<td class="sp2">WEST HAM UNITED FC</td>
+							<td>18</td>
+							<td>22</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td><img src="logoklub/epl/afc-bournemouth.png" class="logoclub"></td>
+							<td class="sp2">AFC BOURNEMOUTH</td>
+							<td>18</td>
+							<td>21</td>
+						</tr>
+						<tr>
+							<td>13</td>
+							<td><img src="logoklub/epl/stoke-city.png" class="logoclub"></td>
+							<td class="sp2">STOKE CITY FC</td>
+							<td>18</td>
+							<td>21</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td><img src="logoklub/epl/burnley.png" class="logoclub"></td>
+							<td class="sp2">BUNRLEY FC</td>
+							<td>18</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td><img src="logoklub/epl/middlesbrough.png" class="logoclub"></td>
+							<td class="sp2">MIDDLESBROUGH FC</td>
+							<td>18</td>
+							<td>18</td>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td><img src="logoklub/epl/leicester-city-fc-hd-logo.png" class="logoclub"></td>
+							<td class="sp2">LEICESTER CITY FC</td>
+							<td>18</td>
+							<td>17</td>
+						</tr>
+						<tr>
+							<td>17</td>
+							<td><img src="logoklub/epl/crystal-palace-fc.png" class="logoclub"></td>
+							<td class="sp2">CRYSTAL PALACE FC</td>
+							<td>18</td>
+							<td>16</td>
+						</tr>
+						<tr>
+							<td>18</td>
+							<td><img src="logoklub/epl/sunderland.png" class="logoclub"></td>
+							<td class="sp2">SUNDERLAND AFC</td>
+							<td>18</td>
+							<td>14</td>
+						</tr>
+						<tr>
+							<td>19</td>
+							<td><img src="logoklub/epl/swansea-city-afc.png" class="logoclub"></td>
+							<td class="sp2">SWANSEA CITY AFC</td>
+							<td>18</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td><img src="logoklub/epl/hull-city.png" class="logoclub"></td>
+							<td class="sp2">HULL CITY FC</td>
+							<td>18</td>
+							<td>12</td>
+						</tr>
+					</table>
+				</div>
+				<div id="akhir"><p><a href="klasemen.html">Lihat Selengkapnya<a></p></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<div class="container">
+				<div id="galeri" class="grid_4">
+					<p>GALERI</p>
+					<a href="galeri.html"><img src="Galeri/Download Wallpaper Terbaru - PSG - Ibrahimmovic.jpg" width="220" height="140"></a>
+				</div>
+				<div id="galeri" class="grid_4">
+					<p>BERITA TERKINI</p>
+					<div id="berita">
+						<p><a href="#">Ronaldo Raih Ballon D’or Ke 4</a></p>
+						<p><a href="#">Dybala Alami Hamstring</a></p>
+					</div>
+				</div>
+				<div id="sm" class="grid_4">
+					<p>SOCIAL MEDIA</p>
+					<a href="#"><img src="small/ig.png"></a>
+					<a href="#"><img src="small/fb.png"></a>
+					<a href="#"><img src="small/g.png"></a>
+					<a href="#"><img src="small/tw.png"></a>
+				</div>
+				<div class="clear"></div>
+				<div id="copy" class="grid_12"><p>©COPYRIGHT 2016</p>
+			</div>
+		</div>
+	</body>
+</html>

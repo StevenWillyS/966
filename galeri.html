@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>KickOff</title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/grid.css">
+		<link rel="stylesheet" href="style.css">
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<link rel="stylesheet" href="SlickNav/slicknav.css" />
+		<script src="SlickNav/jquery.slicknav.min.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="container">
+				<div id="logo" class="grid_4">
+					<a href="index.html">
+						<img src="logo.png">
+					</a>
+				</div>
+				<div id="menu" class="grid_8">
+					<ul id="menu">
+						<li><a href="berita.html">BERITA</a>
+						</li>
+						<li><a href="#">JADWAL</a>
+						<div class = "dropdown2">
+						<a href = "jadwal.html">LIGA INGGRIS</a>
+						<a href = "jadwal2.html">LIGA SPANYOL</a>
+						<a href = "jadwal1.html">LIGA ITALY</a>
+						</div>
+						</li>
+						<li><a href="#">KLASEMEN<a>
+						<div class = "dropdown3">
+						<a href = "klasemen.html">LIGA INGGRIS</a>
+						<a href = "klasemen2.html">LIGA SPANYOL</a>
+						<a href = "klasemen1.html">LIGA ITALY</a>
+						</div>
+						</li><!--
+					 --><li><a href="galeri.html">GALERI<a></li>
+					</ul>
+				</div>
+				<script>
+				$(function(){
+					$('#menu').slicknav();
+				});
+				</script>
+			</div>
+		</div>
+		<div id="big" class="container">
+			
+		</div>
+	</body>
+</html>
